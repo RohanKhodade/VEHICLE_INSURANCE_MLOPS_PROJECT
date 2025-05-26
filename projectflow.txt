@@ -11,5 +11,5 @@ now in notebooks.mongodb_demo.iynb add the code to push data to mongo db atlas a
 create the logger module and test it in demo.py
 create the exception module and test it in demo.py
 
-------------------------------Notebook Experiments------------------------------------------------
+------------------------------Notebook Experiments CORE DATA SCIENCE ------------------------------------------------
 perform the experimants on dataset in notebook folders do whatever needed and take insights 
