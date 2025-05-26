@@ -1,0 +1,15 @@
+---------------------------project setup--------------------------------------------------------------
+create template file to setup folder structure
+create create venv and requirements.txt and setup the toml and setup.py file and add the requirements to venv
+
+------------------------------------MONGO SETUP---------------------------------------------------
+create new project and add the  cluster and collection add credientials to .env file
+add the data in notebooks(just to add data in mongo atlas )
+now in notebooks.mongodb_demo.iynb add the code to push data to mongo db atlas and check it
+
+-------------------------------Logging and Exception modules Creation-----------------------------
+create the logger module and test it in demo.py
+create the exception module and test it in demo.py
+
+------------------------------Notebook Experiments------------------------------------------------
+perform the experimants on dataset in notebook folders do whatever needed and take insights 
