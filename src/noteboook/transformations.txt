@@ -1,6 +1,13 @@
 1. removing id column
+
 2. dummies of vehicle age column and dropping vehicle age (orignal)
     - renaming features as ("Vehicle_Age_lt_1_Year",Vehicle_Age_gt_2_Years")
-3. scaling vintage,age,annual_premium (standard_scaler) saving the scaler.pkl
-4. Applying smote to handle imbalanced data (after train test split) while training
-5. training using hyper paramter and saving the best model as rf_model.pkl
+
+mapping Male to 1 female to 0 
+
+3. scaling the numerical data features
+     age,vintage to standard scaler
+     annual_premium to min max scaling
+
+4. converting categorical data to string datatype except response
+
