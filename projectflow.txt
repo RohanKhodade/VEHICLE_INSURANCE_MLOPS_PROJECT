@@ -13,3 +13,17 @@ create the exception module and test it in demo.py
 
 ------------------------------Notebook Experiments CORE DATA SCIENCE ------------------------------------------------
 perform the experimants on dataset in notebook folders do whatever needed and take insights 
+
+---------------------------------Mongo db connection code -------------------------------------------------
+in the configuration.mongodb_connection.py write code to connect to mongo db
+
+----------------------------------Access the data---------------------------------------------------------
+inside data access folder write code in project_data.py to access data which will use mongo_connection.py
+
+** save the constants in the constants folder (the terms which will be used multiple times) **
+ 
+
+confugure the entity module  -->> (before writing data ingestion component)
+  ---->>  write code in config_entity.py till data ingestion class
+  ---->>  write code in artifact_entity.py till data ingestion class
+
