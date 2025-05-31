@@ -1,5 +1,5 @@
 import numpy as np
-import pandas as pd
+from pandas import DataFrame
 import sys
 from typing import Optional
 
@@ -9,7 +9,7 @@ from src.exception import MyException
 from src.configuration.mongodb_connection import MongoDBClient
 
 # importing constants
-from src.constants import DATABASE_NAME
+from src.constants import DATABASE_NAME,COLLECTION_NAME
 
 
 class Project_Data:
@@ -25,8 +25,8 @@ class Project_Data:
         try:
             self.mongodb_client=MongoDBClient(database_name=DATABASE_NAME)
         except Exception as e:
-            raise(e,sys)
-    def export_collection_as_dataframe(self,collection_name:str,database_name:Optional[str]=None)->pd.DataFrame:
+            raise(e,sys) from e
+    def export_collection_as_dataframe(self,collection_name:str,database_name:Optional[str]=None)->DataFrame:
         """
         Exports the entire mongo db collection as a pandas dataframe
         
@@ -48,13 +48,14 @@ class Project_Data:
             # convert collection of data into dataframe
         
             print("fetching data from mongodb")
-            df=pd.DataFrame(list(collection.find()))
+            df=DataFrame(list(collection.find()))
             print("Data fetched with length {}".format(len(df)))
             if "id" in df.columns:
                 df=df.drop(columns=["id"],axis=1)
             df.replace({"na":"NaN"},inplace=True)
+            logging.info("Data fetching successfull")
             
             return df
         except Exception as e:
-            raise(e,sys)
+            raise(e,sys) from e
          

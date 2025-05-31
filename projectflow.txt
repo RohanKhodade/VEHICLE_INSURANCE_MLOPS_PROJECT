@@ -26,4 +26,8 @@ inside data access folder write code in project_data.py to access data which wil
 confugure the entity module  -->> (before writing data ingestion component)
   ---->>  write code in config_entity.py till data ingestion class
   ---->>  write code in artifact_entity.py till data ingestion class
+===========================================***Components***=================================================================
+write the code in data_ingestion component 
+now write code to training pipeline for data ingestion
+test the data ingestion component in demp.py file 
 

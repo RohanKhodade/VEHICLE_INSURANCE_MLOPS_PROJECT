@@ -53,14 +53,13 @@ class MongoDBClient:
                     raise Exception("mongo db url not set : ",mongo_db_url)
                 
                 # else establish a mongo connection
-                MongoDBClient.client=pymongo.MongoClient(mongo_db_url,tlsCaFILE=ca)
+                MongoDBClient.client=pymongo.MongoClient(mongo_db_url,tlsCAFILE=ca)
                 
             # use the share mongodb client for this instance
             self.client=MongoDBClient.client
             self.database=self.client[database_name] # connect to the specified database
             self.database_name=database_name
-            
-            logging.info("Mongo db connection successfull")
+            logging.info(f"Mongo db connection successfull ")
             
         except Exception as e:
             raise(e,sys) # raise the error 

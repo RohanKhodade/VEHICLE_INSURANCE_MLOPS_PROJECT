@@ -6,7 +6,10 @@ load_dotenv()
 
 MONGODB_URI_KEY=os.getenv("MONGO_URI")
 DATABASE_NAME="vehicle_data"
-COLLECTION_NAME="vehicle_insurance_info"
+COLLECTION_NAME="vehicle_indurance_info"
+
+#vehicle_data.vehicle_indurance_info
+
 
 PIPELINE_NAME:str=""
 ARTIFACT_DIR:str="artifact" # artifact dir file name
@@ -25,7 +28,7 @@ SCHEMA_FILE_PATH:str=os.path.join("config","schema.yaml")
 """
 Data Ingestion related constant 
 """
-DATA_INGESTION_COLLECTION_NAME: str = "vehicle_insurance_info"
+DATA_INGESTION_COLLECTION_NAME: str = "vehicle_indurance_info"
 DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
