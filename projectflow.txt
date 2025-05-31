@@ -31,3 +31,9 @@ write the code in data_ingestion component
 now write code to training pipeline for data ingestion
 test the data ingestion component in demp.py file 
 
+add the code to schema.yaml to give specifications about data format and data types
+write code to utils.main_utils.py
+
+-->> for data validation
+      write code for data validation in entity config and entity artifact_entity
+      write code in data validation component
