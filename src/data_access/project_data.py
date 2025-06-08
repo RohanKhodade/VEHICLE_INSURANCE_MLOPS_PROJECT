@@ -57,5 +57,5 @@ class Project_Data:
             
             return df
         except Exception as e:
-            raise(e,sys) from e
+            raise MyException(e,sys) from e
          

@@ -34,6 +34,6 @@ drop_columns: _id
 num_features:
   - Age
   - Vintage
-num_columns:
-  - Annuak_Premium
+mm_columns:
+  - Annual_Premium
 

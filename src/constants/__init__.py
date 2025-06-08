@@ -39,3 +39,14 @@ Data Validation related Constants
 """
 DATA_VALIDATION_DIR_NAME: str = "data_validation"
 DATA_VALIDATION_REPORT_FILE_NAME: str = "report.yaml"
+
+"""
+Data Transformation related constants
+"""
+DATA_TRANSFORMATION_DIR_NAME:str="data_transformation"
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR:str="tansformed"
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR:str="transformed_object"
+
+"""
+Model Trainer Related Constants
+"""
