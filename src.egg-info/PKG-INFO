@@ -4,4 +4,6 @@ Version: 0.0.1
 Summary: this is MLOPS project for produtunizing models
 Author: Rohan Khodade
 Author-email: Rohan Khodade <rohankhodade883@gmail.com>
+License-File: LICENSE
 Dynamic: author
+Dynamic: license-file
