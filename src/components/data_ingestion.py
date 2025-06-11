@@ -93,7 +93,3 @@ class DataIngestion:
     
         except Exception as e:
             raise MyException (e,sys) from e
-            
-            
-result=DataIngestion(data_ingestion_config=DataIngestionConfig())
-result.initiate_data_ingestion()
