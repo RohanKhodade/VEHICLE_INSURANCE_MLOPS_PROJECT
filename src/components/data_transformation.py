@@ -13,7 +13,6 @@ from src.exception import MyException
 from src.logger import logging
 from src.utils.main_utils import save_object,save_numpy_array_data,read_yaml_file
 
-
 class DataTransformation:
     
     def __init__(self,data_ingestion_artifact:DataIngestionArtifact,
@@ -80,7 +79,7 @@ class DataTransformation:
         logging.info("Renaming specific columns anmd casting to int")
         df=df.rename(columns={
             "Vehicle_Age_< 1 Year":"Vehicle_Age_lt_1_Year",
-            "Vehicle_Age_< 2 Years":"Vehicle_Age_gt_2_Years"
+            "Vehicle_Age_> 2 Years":"Vehicle_Age_gt_2_Years"
         })
         for col in ["Vehicle_Age_lt_1_Year","Vehicle_Age_gt_2_Years","Vehicle_Damage:Yes"]:
             if col in df.columns:
@@ -127,6 +126,9 @@ class DataTransformation:
             input_feature_test_df=self.create_dummy_columns(input_feature_test_df)
             input_feature_test_df=self.rename_columns(input_feature_test_df)
             
+            # 🔥 Align test columns with train columns to avoid transform errors
+            input_feature_test_df = input_feature_test_df.reindex(columns=input_feature_train_df.columns, fill_value=0)
+            
             logging.info("Custom transformations applied to train and test data")
             
             logging.info("starting data transformation")
@@ -157,7 +159,8 @@ class DataTransformation:
             logging.info("saving transformation object and transformed files")
             
             logging.info("Data transformation completed successfully")
-            
+            print("Transformed Training Columns:", input_feature_train_df.columns.tolist())
+            print("Transformed Testing Columns:", input_feature_test_df.columns.tolist())
             return DataTransformationArtifact(
                 transformed_object_file_path=self.data_transformation_config.transformed_object_file_path,
                 transformed_train_file_path=self.data_transformation_config.transformed_train_file_path,
