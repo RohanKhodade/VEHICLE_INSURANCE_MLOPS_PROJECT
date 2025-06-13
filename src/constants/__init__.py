@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # for mongo db connections
 
-MONGODB_URI_KEY=os.getenv("MONGO_URI")
+MONGODB_URI_KEY=os.getenv("MONGODB_URL")
 DATABASE_NAME="vehicle_data"
 COLLECTION_NAME="vehicle_indurance_info"
 
@@ -73,9 +73,10 @@ MODEL_PUSHER_S3_KEY="model-registry"
 """
 Amazon aws connection keys
 """
-AWS_ACCESS_KEY_ID_ENV_KEY = os.getenv("AWS_ACCESS_KEY")
+AWS_ACCESS_KEY_ID_ENV_KEY = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY_ENV_KEY =os.getenv("AWS_SECRET_ACCESS_KEY")
-REGION_NAME =os.getenv("AWS_REGION")
+REGION_NAME =os.getenv("AWS_DEFAULT_REGION")
 
 APP_HOST="0.0.0.0"
 APP_PORT=5000
+
