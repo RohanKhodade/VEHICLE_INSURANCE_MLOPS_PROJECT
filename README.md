@@ -84,26 +84,15 @@ Welcome to this MLOps project, designed to demonstrate a robust pipeline for man
 
 ---
 
-## 🌐 AWS Setup for Model Evaluation & Deployment
 
-### Step 12: AWS Setup
-1. Log in to the AWS console, create an IAM user, and grant `AdministratorAccess`.
-2. Set AWS credentials as environment variables.
-   ```bash
-   # For Bash
-   export AWS_ACCESS_KEY_ID="YOUR_AWS_ACCESS_KEY_ID"
-   export AWS_SECRET_ACCESS_KEY="YOUR_AWS_SECRET_ACCESS_KEY"
-   ```
 
-3. Configure S3 Bucket and add access keys in `constants.__init__.py`.
-
-### Step 13: Model Evaluation and Pushing to S3
+### Step 13: Model Evaluation 
 - Create an S3 bucket named `my-model-mlopsproj` in the `us-east-1` region.
 - Develop code to push/pull models to/from the S3 bucket in `src.aws_storage` and `entity/s3_estimator.py`.
 
 ---
 
-## 🚀 Model Evaluation, Model Pusher, and Prediction Pipeline
+## 🚀 Model Evaluation and Prediction Pipeline
 
 ### Step 14: Model Evaluation & Model Pusher
 - Implement model evaluation and deployment components.
@@ -114,29 +103,12 @@ Welcome to this MLOps project, designed to demonstrate a robust pipeline for man
 
 ---
 
-## 🔄 CI/CD Setup with Docker, GitHub Actions, and AWS
+## 🔄 CI/CD Setup with Docker, GitHub Actions,
 
 ### Step 16: Docker and GitHub Actions
 1. Create `Dockerfile` and `.dockerignore`.
-2. Set up GitHub Actions with AWS authentication by creating secrets in GitHub for:
-   - `AWS_ACCESS_KEY_ID`
-   - `AWS_SECRET_ACCESS_KEY`
-   - `AWS_DEFAULT_REGION`
-   - `ECR_REPO`
-
-### Step 17: AWS EC2 and ECR
-1. Set up an EC2 instance for deployment.
-2. Install Docker on the EC2 machine.
-3. Connect EC2 as a self-hosted runner on GitHub.
-
-### Step 18: Final Steps
-1. Open the 5080 port on the EC2 instance.
-2. Access the deployed app by visiting `http://<public_ip>:5080`.
-
----
 
 ## 🛠️ Additional Resources
-- **Crash Course on setup.py and pyproject.toml**: See `crashcourse.txt` for details.
 - **GitHub Secrets**: Manage secrets for secure CI/CD pipelines.
 
 ---
